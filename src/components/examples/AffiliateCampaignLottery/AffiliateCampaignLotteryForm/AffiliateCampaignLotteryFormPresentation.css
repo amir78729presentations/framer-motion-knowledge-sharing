@@ -1,0 +1,117 @@
+@font-face {
+  font-family: Dana;
+  src: url('https://cdn.tap30.org/fonts/dana/eot/dana-regular.eot');
+  src: url('https://cdn.tap30.org/fonts/dana/eot/dana-regular.eot?#iefix') format('embedded-opentype'),
+  url('https://cdn.tap30.org/fonts/dana/woff2/dana-regular.woff2') format('woff2'),
+  url('https://cdn.tap30.org/fonts/dana/woff/dana-regular.woff') format('woff');
+  font-display: swap;
+}
+
+.affiliateCampaignLotteryContainer {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0B6EE6;
+  background-image: url("../../../../assets/lottery-bg-mobile.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  font-family: Dana;
+  text-align: center;
+  padding: 50px 40px;
+  position: relative;
+  direction: rtl;
+}
+
+.affiliateCampaignLotteryContainer .bannerBg {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  object-fit: cover;
+  object-position: top;
+  height: 100vh;
+  z-index: 0;
+}
+.affiliateCampaignLotteryContainer >*:not(.bannerBg) {
+  z-index: 10;
+}
+.affiliateCampaignLotteryContainer .topSection h2 {
+  font-size: 24px;
+  font-weight: 200;
+  transition: all 0.2s;
+}
+.affiliateCampaignLotteryContainer .topSection h1 {
+  font-size: 32px;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+.affiliateCampaignLotteryContainer .topSection .hide {
+  opacity: 0;
+}
+
+.affiliateCampaignLotteryContainer .winnerSection .title {
+  font-size: 16px;
+  line-height: 2;
+}
+.affiliateCampaignLotteryContainer .winnerSection .name {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.45;
+  transition: all 0.3s;
+}
+.affiliateCampaignLotteryContainer .winnerSection .error {
+  color: red;
+}
+.affiliateCampaignLotteryContainer .winnerSection .loading {
+  color: white;
+  animation: lotteryTextLoading 1s alternate infinite linear;
+}
+@keyframes lotteryTextLoading {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.affiliateCampaignLotteryContainer .buttonContainer {
+  width: 106px;
+  height: 106px;
+  background-image: url("../../../../assets/affiliate-campaign-lottery-button.png");
+  background-color: transparent;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.affiliateCampaignLotteryContainer .buttonContainer .button {
+  width: 75px;
+  height: 75px;
+  background-color: #000;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  opacity: 0;
+  transform: translate(0, -2px);
+  transition: opacity 0.2s;
+}
+.affiliateCampaignLotteryContainer .buttonContainer .button:active {
+  opacity: 0.5;
+}
+.affiliateCampaignLotteryContainer .confetti {
+  z-index: 30 !important;
+  height: 66vw !important;
+  width: 100vw !important;
+}

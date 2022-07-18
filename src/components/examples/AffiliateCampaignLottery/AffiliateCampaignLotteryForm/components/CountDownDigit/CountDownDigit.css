@@ -1,0 +1,8 @@
+.digitContainer {
+  color: #000 !important;
+  width: 15px;
+  text-align: center;
+  font-weight: bold;
+  position: relative;
+  bottom: 50px;
+}

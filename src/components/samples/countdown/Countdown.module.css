@@ -1,0 +1,27 @@
+.countdown {
+    padding: 10px;
+    text-align: center;
+    background-color: #ff5722;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 1.5rem;
+    opacity: 0.8;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    margin: 10px 0 100px;
+}
+
+.btn, .btn:hover {
+    background-color: #ff5722;
+}

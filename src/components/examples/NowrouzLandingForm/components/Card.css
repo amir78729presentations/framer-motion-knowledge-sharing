@@ -1,0 +1,101 @@
+.NowrouzLandingCardContainer {
+  min-height: 180px;
+  max-height: 190px;
+  padding:  45px 90px 30px 5px ;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px 0 rgba(109, 109, 109, 0.1);
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+  margin: 8px auto;
+  width: 100%;
+}
+.NowrouzLandingCardContainerActive {
+  transform: scale(1);
+}
+.NowrouzLandingCardContainer .cardImageContainer{
+  height: 180px;
+  width: 180px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+}
+.NowrouzLandingCardContainer .cardImage {
+  height: 180px;
+  width: 180px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  object-fit: contain;
+  animation: NowrouzLandingCardAppearImage 1s ease-in-out;
+}
+@keyframes NowrouzLandingCardAppearImage {
+  from {
+    object-position: 180px 0;
+    opacity: 0;
+  }
+  to {
+    object-position: 0 0;
+    opacity: 1;
+  }
+}
+.NowrouzLandingCardContainer .cardImage:hover {
+  object-position: 0 0;
+  opacity: 1;
+}
+
+.NowrouzLandingCardContainer h1,
+.NowrouzLandingCardContainer h2,
+.NowrouzLandingCardContainer p {
+  height: unset;
+  position: static;
+  z-index: 20;
+  padding: 0;
+  margin: 0;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  width: 100%;
+  /*animation: NowrouzLandingCardAppearText 1s ease-in-out;*/
+  /*position: relative;*/
+  /*opacity: 0;*/
+}
+
+.NowrouzLandingCardContainer h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.NowrouzLandingCardContainer h2 {
+  font-size: 13px;
+  font-weight: 500;
+  /*position: relative;*/
+  /*bottom: 200px;*/
+  /*margin: 0;*/
+}
+
+.NowrouzLandingCardContainer p {
+  font-size: 11px;
+  font-weight: normal;
+  color: #6d6d6d;
+  margin: 0 !important;
+  max-width: 200px;
+}
+@keyframes NowrouzLandingCardAppearText {
+  from {
+    opacity: 0;
+    left: 20px;
+  }
+  to {
+    opacity: 1;
+    left: 0;
+  }
+}

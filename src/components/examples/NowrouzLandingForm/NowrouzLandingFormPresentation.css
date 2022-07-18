@@ -1,0 +1,77 @@
+@font-face {
+  font-family: Dana;
+  src: url('https://cdn.tap30.org/fonts/dana/eot/dana-regular.eot');
+  src: url('https://cdn.tap30.org/fonts/dana/eot/dana-regular.eot?#iefix') format('embedded-opentype'),
+  url('https://cdn.tap30.org/fonts/dana/woff2/dana-regular.woff2') format('woff2'),
+  url('https://cdn.tap30.org/fonts/dana/woff/dana-regular.woff') format('woff');
+  font-display: swap;
+}
+
+.NowrouzLandingWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  direction: rtl;
+  margin: 0;
+
+}
+.NowrouzLandingContainer {
+  width: 380px;
+  /*padding: 75px 10px 30px;*/
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  margin: auto !important;
+
+}
+.cardsSection h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #000;
+}
+.cardsSection p {
+  font-size: 14px;
+  line-height: normal;
+  margin: 25px 0;
+}
+.cardsSection p {
+  font-size: 14px;
+  line-height: normal;
+  margin: 25px 0;
+}
+.cardsSection p:last-child {
+  /*margin: 32px 0 0;*/
+}
+
+.cardsSection .bannerImage {
+  width: 200px;
+  margin: 50px 0;
+}
+.cardsSection .bannerLogo {
+  width: 100px;
+}
+.cardsSection {
+  transition: min-height 2s ease-in-out;
+  font-family: Dana;
+  direction: rtl;
+  width: 380px;
+
+
+}
+.NowrouzLandingContainer .finalNote {
+  animation: fade 0.5s;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
