@@ -2,7 +2,7 @@
 
 In React, when a component is removed from the tree, it's removed instantly. Framer Motion provides the `AnimatePresence` component to keep components in the DOM while they perform an exit animation.
 
-```javascript
+```
 const [num, setNum] = useState(0);
 
 useEffect(() => {

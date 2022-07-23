@@ -4,7 +4,7 @@ Usually, animations in a motion component will be triggered automatically, eithe
 
 `useAnimationControls` can create animation controls that can be used to manually start/stop animations on one or more `motion` components, or compose multiple animations together.
 
-```javascript
+```
 import { motion, useAnimationControls } from "framer-motion"
 
 function Component() {
@@ -22,13 +22,13 @@ function Component() {
 
 Create animation controls by calling `useAnimationControls()`.
 
-```javascript
+```
 const controls = useAnimationControls()
 ```
 
 Pass `controls` to one or more `motion` components via their `animate` prop.
 
-```javascript
+```
 <motion.div animate={controls} />
 ```
 
@@ -38,7 +38,7 @@ Animations can be started with the `controls.start` method.
 
 `start` accepts either a set of values to animate to (and an optional `transition`), or, if the component(s) it's provided to have a variants prop set, a `variant` label.
 
-```javascript
+```
 // value
 controls.start({
   x: "100%",
@@ -57,7 +57,7 @@ controls.start("hidden")
 
 Different controls can be sequenced together, and these sequences can be composed into functions that themselves can then be sequenced.
 
-```javascript
+```
 const sequence = async () => {
   await menuControls.start({ x: 0 })
   return await itemControls.start({ opacity: 1 })
@@ -75,7 +75,7 @@ Stops animations on all linked components.
 
 Custom data can be sent to this function via the component's `custom` prop.
 
-```javascript
+```
 const controls = useAnimationControls()
 
 useEffect(() => {

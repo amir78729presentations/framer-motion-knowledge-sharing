@@ -9,6 +9,6 @@ It's simple yet powerful, allowing you to express complex user interactions with
 ## The `<motion />` component
 The core of the library is the motion component. Think of it as a plain HTML or SVG element, supercharged with animation capabilities.
 
-```javascript
+```
 <motion.div />
 ```
