@@ -56,3 +56,9 @@ p {
 li {
     margin-bottom: 10px;
 }
+
+code {
+    background-color: #00000011;
+    padding: 2px 4px;
+    border-radius: 5px;
+}

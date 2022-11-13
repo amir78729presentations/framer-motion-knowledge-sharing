@@ -4,6 +4,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.6.0",
+    "@typescript-eslint/parser": "^5.6.0",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "@mui/icons-material": "^5.8.4",
@@ -13,6 +15,7 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "classnames": "^2.3.1",
     "framer-motion": "^6.5.0",
     "framer-motion-3d": "^6.5.1",
     "popmotion": "^11.0.3",
@@ -24,6 +27,7 @@
     "react-scripts": "5.0.1",
     "react-syntax-highlighter": "^15.5.0",
     "remark-gfm": "^3.0.1",
+    "styled-components": "^5.3.5",
     "three": "^0.142.0",
     "web-vitals": "^2.1.4"
   },

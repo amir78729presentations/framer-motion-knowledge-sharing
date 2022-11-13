@@ -25,6 +25,7 @@ import tech from './MarkdownFiles/tech.md'
 
 import example1 from './MarkdownFiles/_e1.md';
 import example2 from './MarkdownFiles/_e2.md';
+import example25 from './MarkdownFiles/_e25.md';
 import example3 from './MarkdownFiles/_e3.md';
 import example4 from './MarkdownFiles/_e4.md';
 
@@ -39,6 +40,7 @@ import Countdown from "./components/samples/countdown/Countdown";
 import React from "react";
 import Gesture from "./components/samples/gesture/Gesture";
 import CountdownExample from "./components/samples/countdownExample/CountdownExample";
+import CountdownExampleNoAnimatePresence from "./components/samples/countdownExample/CountdownExampleNoAnimatePresence";
 
 import NowrouzLandingFormPresentation from "./components/examples/NowrouzLandingForm/NowrouzLandingFormPresentation";
 
@@ -55,6 +57,7 @@ import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
 
 import {motion} from "framer-motion";
 import StepConnector, { stepConnectorClasses } from '@mui/material/StepConnector';
+import NotFoundPresentation from "./components/examples/NotFoundPresentation";
 
 const ColorlibConnector = styled(StepConnector)(({ theme }) => ({
   [`&.${stepConnectorClasses.alternativeLabel}`]: {
@@ -120,7 +123,7 @@ function ColorlibStepIcon(props) {
   );
 }
 function App() {
-  const steps = ['Animations', 'Transition', 'Gestures', 'Technical Review', 'Examples'];
+  const steps = ['Animations', 'Transition', 'Gestures', 'Technical Review'];
   
   return (
     <div className="App">
@@ -131,7 +134,7 @@ function App() {
           transition={{
             delay: 0.5
           }}
-        >framer-motion Knowledge Sharing</motion.h1>
+        ><code>framer-motion</code> Knowledge Sharing</motion.h1>
         <motion.h2
           initial={{x: -10, opacity: 0}}
           animate={{x:0, opacity: 1}}
@@ -202,7 +205,7 @@ function App() {
           <MarkdownContainer markdown={animationExit} />
           <Countdown
             hideButton
-            text="Animate with exit"
+            // text="Animate with exit"
             variant="TIMER"
             animationProps={{
               exit: { x: 100, opacity: 0, position: "absolute" },
@@ -227,7 +230,13 @@ function App() {
         
         
         <MarkdownContainer markdown={animationControls} />
+        
         <NowrouzLandingFormPresentation />
+        
+        {/*<div>*/}
+        {/*  <h3>example: Lottery Wheel Scale</h3>*/}
+        {/*  <NotFoundPresentation />*/}
+        {/*</div>*/}
         
         
         
@@ -460,6 +469,20 @@ function App() {
   
         <h3>Moving Digits from top to bottom</h3>
         <MarkdownContainer markdown={example2} />
+        <CountdownExampleNoAnimatePresence
+          hideButton
+          variant="TIMER"
+          // duration={100}
+          animationProps={{
+            exit: { y: 50, opacity: 1, position: "absolute" },
+            initial: { y: -50, opacity: 1, position: "absolute" },
+            animate: { y:0, opacity: 1 },
+            // transition: { duration: 0.1}
+          }}
+        />
+  
+        <h3>Adding <code>AnimatePresence</code></h3>
+        <MarkdownContainer markdown={example25} />
         <CountdownExample
           hideButton
           variant="TIMER"
@@ -547,7 +570,12 @@ function App() {
               sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
       ></iframe>
       
-      <section>
+      <section style={{
+        minHeight: '50vh',
+        display: 'flex',
+        justifyContent: 'center',
+        flexDirection: 'column'
+      }}>
         <MarkdownContainer markdown={references} />
       </section>
       

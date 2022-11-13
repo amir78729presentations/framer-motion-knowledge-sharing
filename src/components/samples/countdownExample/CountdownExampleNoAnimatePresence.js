@@ -1,14 +1,16 @@
 import React, {useEffect, useState} from "react";
-import s from './Countdown.module.css'
+import s from './countdownExample.module.css'
 import {AnimatePresence, motion} from "framer-motion";
 import Button from "@mui/material/Button";
 import Snackbar from "@mui/material/Snackbar";
+import {useForceUpdate} from "../../../utils/utils";
 
 
-const Countdown = ({ animationProps, variant="TEXT", text, showDefault, hideButton, buttonText }) => {
+const CountdownExampleNoAnimatePresence = ({ animationProps, variant="TEXT", text, showDefault, hideButton, duration }) => {
   const [num, setNum] = useState(0);
   const [start, setStart] = useState(true);
   const [open, setOpen] = React.useState(false);
+  const forceUpdate = useForceUpdate();
 
   const handleClick = () => {
     setOpen(true);
@@ -24,11 +26,16 @@ const Countdown = ({ animationProps, variant="TEXT", text, showDefault, hideButt
 
   useEffect(() => {
     if (variant === 'TIMER' && start) {
+      // setTimeout(() => {
+      //   setNum(number => `${(Number(number) + 1) % 10}`);
+      // }, 200);
       setTimeout(() => {
-        setNum((num + 1))
-      }, 1000);
+        setNum(`${(Number(num) + 1) % 10}`);
+        // setNum(number => `${(Number(number) + 1) % 10}`);
+        forceUpdate();
+      }, duration || 1000);
     }
-  }, [num, start, variant]);
+  }, [num]);
 
   return (
       <>
@@ -45,11 +52,6 @@ const Countdown = ({ animationProps, variant="TEXT", text, showDefault, hideButt
                 position: "absolute"
               }}>
                 <Button
-                  sx={{
-                    position: 'relative',
-                    left: 10
-                  }}
-                  color="warning"
                     variant="contained"
                     className={s.btn}
                     onClick={() => {
@@ -60,30 +62,31 @@ const Countdown = ({ animationProps, variant="TEXT", text, showDefault, hideButt
                         setStart(true)
                       }
                     }}
-                >{ buttonText || 'animate!'}</Button>
+                >animate!</Button>
               </div>
           )}
-          <AnimatePresence>
-              {showDefault && (
-                  <motion.p className={s.countdown} animate={{ opacity: 0.5, x: 0, y: 0, position: 'absolute' }}>
-                      default
-                  </motion.p>
-              )}
+          {/*<AnimatePresence>*/}
+              {/*{showDefault && (*/}
+              {/*    <motion.p className={s.countdown} animate={{ opacity: 0.5, x: 0, y: 0, position: 'absolute' }}>*/}
+              {/*        default*/}
+              {/*    </motion.p>*/}
+              {/*)}*/}
             <motion.p
               className={s.countdown}
               key={num}
               style={{
-                zIndex: 10000
+                zIndex: 100
               }}
               {...animationProps}
             >
               {variant === 'TIMER' && !text ? num : text}
               {/*{variant === 'TEXT' && text}*/}
             </motion.p>
+            
 
-          </AnimatePresence>
+          {/*</AnimatePresence>*/}
         </div>
       </>
   )
 }
-export default Countdown;
+export default CountdownExampleNoAnimatePresence;

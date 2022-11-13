@@ -28,7 +28,7 @@ A different type of animation can be defined for each animating value. `default`
   transition={{
     delay: 1,
     x: { type: "spring", stiffness: 100 },
-    default: { duration: 2 },
+    default: { duration: 2 }
   }}
 />
 ```
