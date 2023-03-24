@@ -4,7 +4,7 @@
 
 Each variant can be defined as a function that resolves when a variant is accessed. These variant functions are provided a single argument, which can be set in a component's `custom` prop.
 
-```
+```javascript
 const variants = {
   visible: i => ({
     opacity: 1,
@@ -28,7 +28,7 @@ return items.map((item, i) => (
 
 Props like `animate`, `whileHover` etc. can define one or more variants by passing a string or an array of strings.
 
-```
+```javascript
 <motion.ul variants={["open", "primary"]} />
 ```
 

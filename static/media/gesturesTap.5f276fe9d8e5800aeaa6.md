@@ -17,7 +17,7 @@ Callback when the tap gesture ends outside this element.
 
 ### example
 
-```
+```javascript
 <motion.button
   whileTap={{
     scale: 1.1,

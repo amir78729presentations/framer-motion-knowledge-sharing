@@ -6,7 +6,7 @@ Properties, variant label or array of variant labels to start in.
 
 Set to `false` to initialise with the values in `animate` (disabling the mount animation).
 
-```
+```javascript
 // As values
 <motion.div initial={{ opacity: 1 }} />
 
@@ -22,7 +22,7 @@ Set to `false` to initialise with the values in `animate` (disabling the mount a
 
 Here's an example:
 
-```
+```javascript
 <motion.div 
     initial={{ x: 50, y: 20, rotate: -60, scale: 1.1}}
     animate={{ x: -100, y: 80, rotate: 30, scale: 0.7 }}

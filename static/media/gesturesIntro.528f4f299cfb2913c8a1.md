@@ -23,7 +23,7 @@ Callback function that fires when pointer stops hovering over the component.
 
 ### example
 
-```
+```javascript
 <motion.button
   whileHover={{
     scale: 1.1,
