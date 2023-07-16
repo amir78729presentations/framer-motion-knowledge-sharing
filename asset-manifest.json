@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/framer-motion-knowledge-sharing/static/css/main.95460409.css",
-    "main.js": "/framer-motion-knowledge-sharing/static/js/main.b18c7ea9.js",
+    "main.js": "/framer-motion-knowledge-sharing/static/js/main.ec07f2eb.js",
     "static/js/787.526e8873.chunk.js": "/framer-motion-knowledge-sharing/static/js/787.526e8873.chunk.js",
     "static/media/design.png": "/framer-motion-knowledge-sharing/static/media/design.211f44a8541630dc7c7a.png",
     "static/media/lottery-light-bulbs-2.png": "/framer-motion-knowledge-sharing/static/media/lottery-light-bulbs-2.0da417e78df094e671f9.png",
@@ -57,11 +57,11 @@
     "static/media/_e2.md": "/framer-motion-knowledge-sharing/static/media/_e2.ea5ddb9780a17d557d8a.md",
     "static/media/_e1.md": "/framer-motion-knowledge-sharing/static/media/_e1.db096c2b945e6ae1886e.md",
     "main.95460409.css.map": "/framer-motion-knowledge-sharing/static/css/main.95460409.css.map",
-    "main.b18c7ea9.js.map": "/framer-motion-knowledge-sharing/static/js/main.b18c7ea9.js.map",
+    "main.ec07f2eb.js.map": "/framer-motion-knowledge-sharing/static/js/main.ec07f2eb.js.map",
     "787.526e8873.chunk.js.map": "/framer-motion-knowledge-sharing/static/js/787.526e8873.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.95460409.css",
-    "static/js/main.b18c7ea9.js"
+    "static/js/main.ec07f2eb.js"
   ]
 }
